@@ -37,7 +37,7 @@ Config location: `~/.wezterm.lua`
 
 ### Features
 
-- Multi-shell support (Nushell, PowerShell, cmd, WSL)
+- Multi-shell support (Nushell, PowerShell 7, Windows PowerShell, cmd, WSL)
 - GitHub Dark theme with integrated title bar
 - Font: JetBrains Mono + Sarasa Term SC (Chinese)
 - WebGPU rendering (165Hz, optimized for high-end GPU)
@@ -64,4 +64,10 @@ Copy-Item .\wezterm\.wezterm.lua $HOME\.wezterm.lua
 ```powershell
 winget install JetBrains.JetBrainsMono
 winget install Sarasa.Gothic
+```
+
+### Optional: PowerShell 7
+
+```powershell
+winget install --id Microsoft.PowerShell --source winget
 ```
