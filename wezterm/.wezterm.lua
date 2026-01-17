@@ -4,18 +4,23 @@ return {
   -- ===== Default Shell =====
   default_prog = { 'nu', '--login' },
 
+  -- ===== WSL Domains (for command palette) =====
+  wsl_domains = {
+    { name = 'WSL:Ubuntu', distribution = 'Ubuntu', default_cwd = '~' },
+  },
+
   -- ===== Shell Launcher Menu =====
   launch_menu = {
-    { label = 'Nushell', args = { 'nu', '--login' } },
-    { label = 'PowerShell 7', args = { 'pwsh', '-NoLogo' } },
-    { label = 'Windows PowerShell', args = { 'powershell.exe', '-NoLogo' } },
-    { label = 'cmd', args = { 'cmd.exe' } },
-    { label = 'WSL (default)', args = { 'wsl.exe' } },
+    { label = 'Nushell', args = { 'nu', '--login' }, domain = { DomainName = 'local' } },
+    { label = 'PowerShell 7', args = { 'pwsh', '-NoLogo' }, domain = { DomainName = 'local' } },
+    { label = 'Windows PowerShell', args = { 'powershell.exe', '-NoLogo' }, domain = { DomainName = 'local' } },
+    { label = 'cmd', args = { 'cmd.exe' }, domain = { DomainName = 'local' } },
+    { label = 'WSL (Ubuntu)', domain = { DomainName = 'WSL:Ubuntu' } },
   },
 
   keys = {
     -- Shell launcher (Ctrl+Shift+Space)
-    { key = 'Space', mods = 'CTRL|SHIFT', action = wezterm.action.ShowLauncherArgs { flags = 'LAUNCH_MENU_ITEMS' } },
+    { key = 'Space', mods = 'CTRL|SHIFT', action = wezterm.action.ShowLauncherArgs { flags = 'LAUNCH_MENU_ITEMS|DOMAINS' } },
     -- Copy/Paste (Ctrl+Shift+C/V to avoid conflict with Ctrl+C interrupt)
     { key = 'c', mods = 'CTRL|SHIFT', action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection' },
     { key = 'v', mods = 'CTRL', action = wezterm.action.PasteFrom 'Clipboard' },
