@@ -22,6 +22,10 @@ mouse-hide-while-typing = true
 # Copy on select to the system clipboard
 copy-on-select = clipboard
 
+# ===== Scrollback =====
+# Ghostty uses bytes for the scrollback buffer. ~10MB ≈ 50k lines at ~200 chars/line.
+scrollback-limit = 10000000
+
 # ===== Window Appearance =====
 background-opacity = 0.92
 background-opacity-cells = true

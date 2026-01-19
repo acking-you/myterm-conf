@@ -17,6 +17,7 @@ Config file: `ghostty/config`
 - macOS tweaks: Option as Alt, tab-style titlebar, save window state.
 - Quick terminal at the top with a global toggle.
 - SSH terminfo shell integration to avoid garbled remote output.
+- Scrollback buffer set to ~10MB (roughly 50k lines, depending on line length).
 
 ## Keybindings
 
@@ -41,3 +42,4 @@ Config file: `ghostty/config`
 - Use `ghostty +list-themes` to view all available theme names.
 - The global quick terminal keybind requires Accessibility permissions.
 - If you prefer ligatures, remove the `font-feature = -calt` line.
+- Ghostty config uses `scrollback-limit` in bytes; the official options list does not include a `scrollbar` setting.
