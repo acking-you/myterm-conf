@@ -2,7 +2,7 @@
 
 # ===== Theme =====
 # Separate light/dark themes and let Ghostty follow the OS appearance.
-theme = dark:Catppuccin Frappe,light:Catppuccin Latte
+theme = dark:GitHub Dark High Contrast,light:GitHub Light High Contrast
 window-theme = auto
 
 # ===== Fonts =====
