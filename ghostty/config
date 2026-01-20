@@ -2,7 +2,7 @@
 
 # ===== Theme =====
 # Separate light/dark themes and let Ghostty follow the OS appearance.
-theme = dark:GitHub Dark High Contrast,light:GitHub Light High Contrast
+theme = dark:GitHub Dark Default,light:GitHub Light Default
 window-theme = auto
 
 # ===== Fonts =====
@@ -33,6 +33,7 @@ background-blur = 20
 window-padding-x = 10
 window-padding-y = 8
 window-padding-balance = true
+split-divider-color = #58a6ff
 
 # ===== macOS Behavior =====
 macos-option-as-alt = true
